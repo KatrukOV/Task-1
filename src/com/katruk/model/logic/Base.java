@@ -28,6 +28,8 @@ public class Base {
 		checkArg(knight);
 
 		for (Map.Entry entry : knightMap.entrySet()){
+
+			//todo  equals
 			if ( ((Knight) entry.getValue()).getName().equals(knight.getName()) ){
 				//or other logic
 				System.out.println("update banned");
