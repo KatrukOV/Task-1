@@ -9,7 +9,7 @@ public class Armor extends AmmunitionImpl {
 
 	/**
 	 * Constructor
-	 * @param id		ID of Ammunition
+	 * @param id	ID of Ammunition
 	 */
 	public Armor(int id) {
 		super(id);

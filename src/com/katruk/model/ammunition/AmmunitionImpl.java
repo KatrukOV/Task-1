@@ -23,7 +23,7 @@ public abstract class AmmunitionImpl implements Ammunition {
 
 	/**
 	 * Constructor
-	 * @param id  		ID of ammunition
+	 * @param id	ID of ammunition
 	 */
 	public AmmunitionImpl(int id) {
 		this.id = id;
@@ -32,11 +32,6 @@ public abstract class AmmunitionImpl implements Ammunition {
 	@Override
 	public int getId() {
 		return id;
-	}
-
-	@Override
-	public void setId(int id) {
-		this.id = id;
 	}
 
 	@Override

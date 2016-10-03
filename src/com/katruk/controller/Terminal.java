@@ -9,8 +9,11 @@ import com.katruk.model.ammunition.TypeAmmunition;
 import com.katruk.model.defaults.DefaultItems;
 import com.katruk.model.logic.KnightFactory;
 import com.katruk.veiw.*;
+
+import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 public class Terminal implements Const, Message {
 
@@ -215,7 +218,14 @@ public class Terminal implements Const, Message {
 
 			if (base.getKnightMap().get(id).getAmmunition().size() == 0) return;
 
-			List<Ammunition> ammunitionList = base.getKnightMap().get(id).sortAmmunitionWeight();
+			List<Ammunition> ammunitionList = base.getKnightMap().get(id).sortAmmunition(
+					new Comparator<Ammunition>() {
+			@Override
+			public int compare(Ammunition o1, Ammunition o2) {
+				return o1.getWeight() - o2.getWeight();
+			}
+		});
+
 
 			for (Ammunition item: ammunitionList){
 				System.out.println(item);
@@ -242,9 +252,9 @@ public class Terminal implements Const, Message {
 			writer.printStr(ENTER_MAX_PRICE_AMMUNITION_KNIGHT);
 				double max = reader.readDouble(MIN_PRICE_OF_AMMUNITION, MAX_PRICE_OF_AMMUNITION);
 
-			List<Ammunition> ammunitionList = base.getKnightMap().get(id).searchRangePrice(min, max);
+			Set<Ammunition> ammunitionSet = base.getKnightMap().get(id).searchRangePrice(min, max);
 
-			for (Ammunition item: ammunitionList){
+			for (Ammunition item: ammunitionSet){
 				System.out.println(item);
 			}
 

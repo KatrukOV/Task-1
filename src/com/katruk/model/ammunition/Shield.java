@@ -9,7 +9,7 @@ public class Shield extends AmmunitionImpl {
 
 	/**
 	 * Constructor
-	 * @param id		ID of ammunition
+	 * @param id	ID of ammunition
 	 */
 	public Shield(int id) {
 		super(id);

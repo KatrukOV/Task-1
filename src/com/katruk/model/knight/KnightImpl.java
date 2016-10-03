@@ -1,12 +1,7 @@
 package com.katruk.model.knight;
 
 import com.katruk.model.ammunition.Ammunition;
-
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
-
+import java.util.*;
 
 public class KnightImpl implements Knight {
 
@@ -23,7 +18,7 @@ public class KnightImpl implements Knight {
 	/**
 	 *  ammunition of knight
 	 */
-	private List<Ammunition> ammunition = new ArrayList<Ammunition>();
+	private Set<Ammunition> ammunition;
 
 	/**
 	 * Constructor
@@ -31,6 +26,7 @@ public class KnightImpl implements Knight {
 	 */
 	public KnightImpl(int id) {
 		this.id = id;
+		ammunition = new HashSet<>();
 	}
 
 	/**
@@ -39,7 +35,6 @@ public class KnightImpl implements Knight {
 	 */
 	@Override
 	public void equip(Ammunition itemAmmunition){
-		if (ammunition == null) new ArrayList<Ammunition>();
 		ammunition.add(itemAmmunition);
 	}
 
@@ -51,38 +46,35 @@ public class KnightImpl implements Knight {
 	public double calculateCost(){
 		double result = 0;
 		for (Ammunition item : ammunition){
-			result+=item.getPrice();
+			result += item.getPrice();
 		}
 		return result;
 	}
 
 	/**
-	 * sorting based on the weight of ammunition
-	 * @return new List of ammunition
+	 * sorting ammunition based by comparator //Ammunition based sorting comparator
+	 * @param comparator	comparator of Ammunition
+	 * @return
 	 */
 	@Override
-	public List<Ammunition> sortAmmunitionWeight(){
-		final List<Ammunition> result = new ArrayList<Ammunition>(ammunition);
-		Collections.sort(result, new Comparator<Ammunition>() {
-			@Override
-			public int compare(Ammunition o1, Ammunition o2) {
-				return o1.getWeight() - o2.getWeight();
-			}
-		});
+	public List<Ammunition> sortAmmunition(Comparator<Ammunition> comparator){
+		List<Ammunition> result = new ArrayList<>();
+		result.addAll(ammunition);
+		Collections.sort(result, comparator);
 		return result;
 	}
 
 	/**
 	 * search for ammunition elements that match a given price range
-	 * @param loPrice		the lower limit of the price
-	 * @param hiPrice		the upper limit of price
+	 * @param lowerPrice	the lower limit of the price
+	 * @param higherPrice	the higher limit of price
 	 * @return 				new List of ammunition
 	 */
 	@Override
-	public List<Ammunition> searchRangePrice(double loPrice, double hiPrice){
-		final List<Ammunition> result = new ArrayList<Ammunition>();
+	public Set<Ammunition> searchRangePrice(double lowerPrice, double higherPrice){
+		final Set<Ammunition> result = new HashSet<>();
 		for (Ammunition item : ammunition){
-			if ((item.getPrice() > loPrice) && (item.getPrice() < hiPrice)){
+			if ((item.getPrice() > lowerPrice) && (item.getPrice() < higherPrice)){
 				result.add(item);
 			}
 		}
@@ -105,7 +97,7 @@ public class KnightImpl implements Knight {
 	}
 
 	@Override
-	public List<Ammunition> getAmmunition() {
+	public Set<Ammunition> getAmmunition() {
 		return ammunition;
 	}
 
@@ -114,3 +106,21 @@ public class KnightImpl implements Knight {
 		return "id "+id+" name: "+name+" ammunition: " + ammunition;
 	}
 }
+
+
+
+//	Collections.sort(result, new Comparator<Ammunition>() {
+//			@Override
+//			public int compare(Ammunition o1, Ammunition o2) {
+//				return o1.getWeight() - o2.getWeight();
+//			}
+//		});
+//		return result;
+//		final Set<Ammunition> result = new TreeSet<>();
+//		Collections.sort(result, new Comparator<Ammunition>() {
+//			@Override
+//			public int compare(Ammunition o1, Ammunition o2) {
+//				return o1.getWeight() - o2.getWeight();
+//			}
+//		});
+//		return result;

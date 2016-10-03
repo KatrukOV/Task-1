@@ -9,12 +9,6 @@ public interface Ammunition {
 	public int getId();
 
 	/**
-	 * set id of ammunition
-	 * @param id 	id of ammunition
-	 */
-	public void setId(int id);
-
-	/**
 	 * get name of ammunition
 	 * @return	name of ammunition
 	 */

@@ -2,32 +2,12 @@ package com.katruk.model.knight;
 
 import com.katruk.model.ammunition.Ammunition;
 
+import java.util.Comparator;
 import java.util.List;
+import java.util.Set;
 
 
 public interface Knight{
-
-	public void equip(Ammunition itemAmmunition);
-
-	/**
-	 * Calculate the cost of ammunition
-	 * @return price of all ammunition
-	 */
-	public double calculateCost();
-
-	/**
-	 * sorting based on the weight of ammunition
-	 * @return new List of ammunition
-	 */
-	public List<Ammunition> sortAmmunitionWeight();
-
-	/**
-	 * search for ammunition elements that match a given price range
-	 * @param loPrice		the lower limit of the price
-	 * @param hiPrice		the upper limit of price
-	 * @return 				new List of ammunition
-	 */
-	public List<Ammunition> searchRangePrice(double loPrice, double hiPrice);
 
 	/**
 	 * get ID of Knight
@@ -53,5 +33,32 @@ public interface Knight{
 	 * get all ammunition of Knight
 	 * @return list ammunition of Knight
 	 */
-	public List<Ammunition> getAmmunition();
+	public Set<Ammunition> getAmmunition();
+
+	/**
+	 *
+	 * @param itemAmmunition
+	 */
+	public void equip(Ammunition itemAmmunition);
+
+	/**
+	 * Calculate the cost of ammunition
+	 * @return price of all ammunition
+	 */
+	public double calculateCost();
+
+	/**
+	 * search for ammunition elements that match a given price range
+	 * @param lowerPrice	the lower limit of the price
+	 * @param higherPrice	the higher limit of price
+	 * @return 				new List of ammunition
+	 */
+	public Set<Ammunition> searchRangePrice(double lowerPrice, double higherPrice);
+
+	/**
+	 * sorting ammunition based by comparator //Ammunition based sorting comparator
+	 * @param comparator	comparator of Ammunition
+	 * @return
+	 */
+	public List<Ammunition> sortAmmunition(Comparator<Ammunition> comparator);
 }
