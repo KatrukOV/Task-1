@@ -32,27 +32,6 @@ public class Reader {
         return resultInt;
     }
 
-//    /**
-//     * read a double from the range
-//     *
-//     * @param lo lowest double
-//     * @param hi highest double
-//     * @return input double
-//     */
-//    public double readDouble(double lo, double hi) {
-//
-//        double resultDouble = 0;
-//        try {
-//            do {
-//                resultDouble = Double.parseDouble(reader.readLine());
-//
-//            } while (!((resultDouble >= lo) && (resultDouble <= hi)));
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//        return resultDouble;
-//    }
-
     /**
      * read text
      *
