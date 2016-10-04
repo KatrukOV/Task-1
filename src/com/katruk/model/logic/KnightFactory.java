@@ -4,6 +4,7 @@ import com.katruk.model.knight.Knight;
 import com.katruk.model.knight.KnightImpl;
 
 public class KnightFactory {
+
 	/**
 	 * this single knightFactory
 	 */
@@ -12,7 +13,7 @@ public class KnightFactory {
 	/**
 	 * ID of Knight
 	 */
-	private int idKnight = -1;
+	private int idKnight = 0;
 
 	/**
 	 * hidden constructor
@@ -29,11 +30,10 @@ public class KnightFactory {
 	}
 
 	/**
-	 * create different Knight;
+	 * create different Knight with unique id;
 	 * @return		one of Knight
 	 */
 	public Knight create() {
-		return new KnightImpl(++idKnight);
+		return new KnightImpl(idKnight++);
 	}
-
 }

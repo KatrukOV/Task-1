@@ -13,41 +13,30 @@ public class Base {
 	/**
 	 * map for all knights
 	 */
-	private Map<Integer, Knight> knightMap = new HashMap<Integer, Knight>();
+	private Map<Integer, Knight> knightMap = new HashMap<>();
 
 	/**
 	 * map for all ammunition
 	 */
-	private Map<Integer, Ammunition> ammunitionMap = new HashMap<Integer, Ammunition>();
+	private Map<Integer, Ammunition> ammunitionMap = new HashMap<>();
 
 	/**
-	 * add to map new knight
+	 * add to Base knight
 	 * @param knight	knight
+	 * @param <T>		type of knight
 	 */
-	public void addKnight(Knight knight){
-		checkArg(knight);
-
-		for (Map.Entry entry : knightMap.entrySet()){
-
-			//todo  equals
-			if ( ((Knight) entry.getValue()).getName().equals(knight.getName()) ){
-				//or other logic
-				System.out.println("update banned");
-				return;
-			}
-		}
-
+	public <T extends Knight> void addKnight(T knight){
+		checkNull(knight);
 		knightMap.put(knight.getId(), knight);
 	}
 
 	/**
-	 * add to map ammunition
+	 * add to Base ammunition
 	 * @param ammunition	ammunition
-	 * @param <T>			type of ammunition
+	 * @param <T>		type of ammunition
 	 */
-	public <T extends Ammunition> void  addAmmunition(T ammunition){
-		checkArg(ammunition);
-
+	public <T extends Ammunition> void addAmmunition(T ammunition){
+		checkNull(ammunition);
 		ammunitionMap.put(ammunition.getId(), ammunition);
 	}
 
@@ -66,8 +55,8 @@ public class Base {
 	 * @param hiPrice	highest price
 	 * @return			list of ammunition
 	 */
-	public List<Ammunition> searchRangePriceAllAmmunition(double loPrice, double hiPrice){
-		final List<Ammunition> result = new ArrayList<Ammunition>();
+	public List<Ammunition> searchRangePriceAllAmmunition(int loPrice, int hiPrice){
+		final List<Ammunition> result = new ArrayList<>();
 
 		for (Map.Entry entry : ammunitionMap.entrySet() ){
 			Ammunition item = (Ammunition) entry.getValue();
@@ -114,12 +103,11 @@ public class Base {
 	 * check arguments for NULL
 	 * @param arg	input arguments
 	 */
-	private void checkArg(Object...arg){
+	private void checkNull(Object... arg){
 		for(Object item: arg){
 			if (item == null){
 				throw new IllegalArgumentException("Bed input argument");
 			}
 		}
 	}
-
 }

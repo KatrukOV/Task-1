@@ -15,7 +15,7 @@ public class AmmunitionFactory {
 	/**
 	 *	ID of ammunition
 	 */
-	private int idAmmunition = -1;
+	private int idAmmunition = 0;
 
 	/**
 	 * hidden constructor
@@ -32,7 +32,7 @@ public class AmmunitionFactory {
 	}
 
 	/**
-	 * create different type of ammunition
+	 * create different type of ammunition with unique id
 	 * @param type		type of ammunition
 	 * @return			one of ammunition
 	 */
@@ -40,16 +40,9 @@ public class AmmunitionFactory {
 		Ammunition result = null;
 
 		switch (type){
-			case Armor:	{	result = new Armor(++idAmmunition);  	break;}
-			case Shield:{	result = new Shield(++idAmmunition);	break;}
+			case Armor:	{	result = new Armor(idAmmunition++);  	break;}
+			case Shield:{	result = new Shield(idAmmunition++);	break;}
 		}
 		return result;
 	}
-
-
-
-
-
-
-
 }

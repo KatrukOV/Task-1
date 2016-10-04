@@ -36,12 +36,12 @@ public interface Ammunition {
 	 * get price of ammunition
 	 * @return	price of ammunition
 	 */
-	public double getPrice();
+	public int getPrice();
 
 	/**
 	 * set	price of ammunition
 	 * @param price	price of ammunition
 	 */
-	public void setPrice(double price);
+	public void setPrice(int price);
 
 }

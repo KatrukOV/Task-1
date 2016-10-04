@@ -1,6 +1,7 @@
 package com.katruk.model.ammunition;
 
 public abstract class AmmunitionImpl implements Ammunition {
+
 	/**
 	 * identifier of ammunition
 	 */
@@ -19,7 +20,7 @@ public abstract class AmmunitionImpl implements Ammunition {
 	/**
 	 * price of ammunition
 	 */
-	double price;
+	int price;
 
 	/**
 	 * Constructor
@@ -55,17 +56,17 @@ public abstract class AmmunitionImpl implements Ammunition {
 	}
 
 	@Override
-	public double getPrice() {
+	public int getPrice() {
 		return price;
 	}
 
 	@Override
-	public void setPrice(double price) {
+	public void setPrice(int price) {
 		this.price = price;
 	}
 
 	@Override
 	public String toString() {
-		return String.format("ID: %3d name: %s weight %5d price %10.1f  ", id, name, weight, price);
+		return String.format("ID: %3d name: %s weight %5d price %10d  ", id, name, weight, price);
 	}
 }

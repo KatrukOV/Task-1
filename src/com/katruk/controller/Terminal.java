@@ -113,7 +113,8 @@ public class Terminal implements Const, Message {
 	 * add new ammunition
 	 */
 	private void addAmmunitionMenu() {
-		do {
+
+        do {
 			writer.printStr(ENTER_TYPE_AMMUNITION);
 
 			TypeAmmunition[] typeAmmunition = TypeAmmunition.values();
@@ -133,7 +134,7 @@ public class Terminal implements Const, Message {
 			writer.printStr(ENTER_WEIGHT_AMMUNITION);
 			int weight = reader.readInt(MIN_WEIGHT_OF_AMMUNITION, MAX_WEIGHT_OF_AMMUNITION);
 			writer.printStr(ENTER_PRICE_AMMUNITION);
-			double price = reader.readDouble(MIN_PRICE_OF_AMMUNITION, MAX_PRICE_OF_AMMUNITION);
+			int price = reader.readInt(MIN_PRICE_OF_AMMUNITION, MAX_PRICE_OF_AMMUNITION);
 
 			assert choiceType != null;
 			switch (choiceType) {
@@ -169,8 +170,9 @@ public class Terminal implements Const, Message {
 	 *  appoint the ammunition on the knight
 	 */
 	private void appointAmmunitionKnightMenu() {
-		if (base.getKnightMap().size() == 0)return;
-		if (base.getAmmunitionMap().size() == 0)return;
+        if (EmptyKnightMap()) return;
+
+        if (EmptyAmmunitionMap()) return;
 
 		int idKnight;
 		int idAmmunition;
@@ -192,12 +194,14 @@ public class Terminal implements Const, Message {
 	 * calculate cost of ammunition on the knight
 	 */
 	private void calcCostAmmunitionMenu() {
-		if (base.getKnightMap().size() == 0) return;
-		do {
+
+        if (EmptyKnightMap()) return;
+
+        do {
 			writer.printStr(ENTER_ID_KNIGHT);
 
 			int id = reader.readInt(0, base.getKnightMap().size() - 1);
-			double cost = base.getKnightMap().get(id).calculateCost();
+			double cost = base.getKnightMap().get(id).calculateCostAmmunition();
 
 			writer.printStrLN(String.format(COST_AMMUNITION_KNIGHT,
 					base.getKnightMap().get(id).getName(), cost));
@@ -211,23 +215,20 @@ public class Terminal implements Const, Message {
 	 * sort ammunition on the knight by the weight
 	 */
 	private void sortAmmunitionWeightKnightMenu() {
-		if (base.getKnightMap().size() == 0) return;
-		do {
+
+        if (EmptyKnightMap()) return;
+        if (EmptyAmmunitionMap()) return;
+
+        do {
 			writer.printStr(ENTER_ID_KNIGHT);
 			int id = reader.readInt(0, base.getKnightMap().size() - 1);
 
 			if (base.getKnightMap().get(id).getAmmunition().size() == 0) return;
 
-			List<Ammunition> ammunitionList = base.getKnightMap().get(id).sortAmmunition(
-					new Comparator<Ammunition>() {
-			@Override
-			public int compare(Ammunition o1, Ammunition o2) {
-				return o1.getWeight() - o2.getWeight();
-			}
-		});
+			List<Ammunition> ammunitionList;
+            ammunitionList = base.getKnightMap().get(id).sortAmmunition((o1, o2) -> o1.getWeight() - o2.getWeight());
 
-
-			for (Ammunition item: ammunitionList){
+            for (Ammunition item: ammunitionList){
 				System.out.println(item);
 			}
 
@@ -240,7 +241,9 @@ public class Terminal implements Const, Message {
 	 * search ammunition knights in the price range
 	 */
 	private void searchRangeAmmunitionKnightMenu() {
-		if (base.getKnightMap().size() == 0) return;
+
+        if (EmptyKnightMap()) return;
+
 		do {
 			writer.printStr(ENTER_ID_KNIGHT);
 			int id = reader.readInt(0, base.getKnightMap().size() - 1);
@@ -248,9 +251,9 @@ public class Terminal implements Const, Message {
 			if (base.getKnightMap().get(id).getAmmunition().size() == 0) return;
 
 			writer.printStr(ENTER_MIN_PRICE_AMMUNITION_KNIGHT);
-				double min = reader.readDouble(MIN_PRICE_OF_AMMUNITION, MAX_PRICE_OF_AMMUNITION);
+				int min = reader.readInt(MIN_PRICE_OF_AMMUNITION, MAX_PRICE_OF_AMMUNITION);
 			writer.printStr(ENTER_MAX_PRICE_AMMUNITION_KNIGHT);
-				double max = reader.readDouble(MIN_PRICE_OF_AMMUNITION, MAX_PRICE_OF_AMMUNITION);
+				int max = reader.readInt(MIN_PRICE_OF_AMMUNITION, MAX_PRICE_OF_AMMUNITION);
 
 			Set<Ammunition> ammunitionSet = base.getKnightMap().get(id).searchRangePrice(min, max);
 
@@ -266,13 +269,14 @@ public class Terminal implements Const, Message {
 	 * search ammunition in the price range
 	 */
 	private void searchRangeAllAmmunitionMenu() {
-		if (base.getAmmunitionMap().size() == 0) return;
-		do {
 
+        if (EmptyAmmunitionMap()) return;
+
+        do {
 			writer.printStr(ENTER_MIN_PRICE_AMMUNITION);
-				double min = reader.readDouble(MIN_PRICE_OF_AMMUNITION, MAX_PRICE_OF_AMMUNITION);
+				int min = reader.readInt(MIN_PRICE_OF_AMMUNITION, MAX_PRICE_OF_AMMUNITION);
 			writer.printStr(ENTER_MAX_PRICE_AMMUNITION);
-				double max = reader.readDouble(MIN_PRICE_OF_AMMUNITION, MAX_PRICE_OF_AMMUNITION);
+				int max = reader.readInt(MIN_PRICE_OF_AMMUNITION, MAX_PRICE_OF_AMMUNITION);
 
 			List<Ammunition> ammunitionList = base.searchRangePriceAllAmmunition(min, max);
 
@@ -288,9 +292,10 @@ public class Terminal implements Const, Message {
 	 * show all knight
 	 */
 	private void showKnight() {
-		if (base.getKnightMap().size() == 0) { writer.printStrLN(NO_KNIGHTS); return;}
 
-		for (Map.Entry entry : base.getKnightMap().entrySet()) {
+        if (EmptyKnightMap()) return;
+
+        for (Map.Entry entry : base.getKnightMap().entrySet()) {
 			writer.printStrLN(entry.getValue().toString());
 
 		}
@@ -300,12 +305,43 @@ public class Terminal implements Const, Message {
 	 * show all ammunition
 	 */
 	private void showAmmunition() {
-		if (base.getKnightMap().size() == 0) {writer.printStrLN(NO_AMMUNITION); return;}
+
+        if (EmptyAmmunitionMap()) return;
 
 		for (Map.Entry entry : base.getAmmunitionMap().entrySet()){
 			writer.printStrLN(entry.getValue().toString());
-
 		}
 	}
 
+	private boolean EmptyKnightMap(){
+        if (base.getKnightMap().size() == 0) {
+            writer.printStrLN(NO_KNIGHTS);
+            return true;
+        }
+        return false;
+    }
+
+    private boolean EmptyAmmunitionMap(){
+        if (base.getAmmunitionMap().size() == 0) {
+            writer.printStrLN(NO_AMMUNITION);
+            return true;
+        }
+        return false;
+    }
 }
+
+
+//	private void checkEmpty(Class clazz){
+//		switch (clazz) {
+//			case Knight.class: { if (base.getKnightMap().size() == 0) {
+//										writer.printStrLN(NO_KNIGHTS);
+//										return;
+//								   }
+//			    break;}
+//			case Ammunition.class: { if (base.getKnightMap().size() == 0) {
+//										writer.printStrLN(NO_AMMUNITION);
+//										return;
+//									}
+//                break;}
+//			default: writer.printStrLN(NO_TYPE);
+//		}

@@ -15,7 +15,6 @@ public interface Knight{
 	 */
 	public int getId();
 
-
 	/**
 	 * get name of Knight
 	 * @return name of Knight
@@ -28,7 +27,6 @@ public interface Knight{
 	 */
 	public void setName(String name);
 
-
 	/**
 	 * get all ammunition of Knight
 	 * @return list ammunition of Knight
@@ -36,16 +34,16 @@ public interface Knight{
 	public Set<Ammunition> getAmmunition();
 
 	/**
-	 *
-	 * @param itemAmmunition
+	 * equip Knight
+	 * @param itemAmmunition one of ammunition
 	 */
 	public void equip(Ammunition itemAmmunition);
 
 	/**
-	 * Calculate the cost of ammunition
-	 * @return price of all ammunition
+	 * Calculate the price of ammunition
+	 * @return cost of all ammunition
 	 */
-	public double calculateCost();
+	public int calculateCostAmmunition();
 
 	/**
 	 * search for ammunition elements that match a given price range
@@ -53,12 +51,12 @@ public interface Knight{
 	 * @param higherPrice	the higher limit of price
 	 * @return 				new List of ammunition
 	 */
-	public Set<Ammunition> searchRangePrice(double lowerPrice, double higherPrice);
+	public Set<Ammunition> searchRangePrice(int lowerPrice, int higherPrice);
 
 	/**
 	 * sorting ammunition based by comparator //Ammunition based sorting comparator
 	 * @param comparator	comparator of Ammunition
-	 * @return
+	 * @return	list of Ammunition
 	 */
 	public List<Ammunition> sortAmmunition(Comparator<Ammunition> comparator);
 }

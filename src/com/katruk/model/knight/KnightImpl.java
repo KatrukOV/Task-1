@@ -43,8 +43,8 @@ public class KnightImpl implements Knight {
 	 * @return price of all ammunition
 	 */
 	@Override
-	public double calculateCost(){
-		double result = 0;
+	public int calculateCostAmmunition(){
+		int result = 0;
 		for (Ammunition item : ammunition){
 			result += item.getPrice();
 		}
@@ -54,7 +54,7 @@ public class KnightImpl implements Knight {
 	/**
 	 * sorting ammunition based by comparator //Ammunition based sorting comparator
 	 * @param comparator	comparator of Ammunition
-	 * @return
+	 * @return		List of Ammunition
 	 */
 	@Override
 	public List<Ammunition> sortAmmunition(Comparator<Ammunition> comparator){
@@ -71,7 +71,7 @@ public class KnightImpl implements Knight {
 	 * @return 				new List of ammunition
 	 */
 	@Override
-	public Set<Ammunition> searchRangePrice(double lowerPrice, double higherPrice){
+	public Set<Ammunition> searchRangePrice(int lowerPrice, int higherPrice){
 		final Set<Ammunition> result = new HashSet<>();
 		for (Ammunition item : ammunition){
 			if ((item.getPrice() > lowerPrice) && (item.getPrice() < higherPrice)){
