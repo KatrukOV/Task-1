@@ -1,43 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5810a957-787b-4869-9d50-7c09a3c6cb7c" name="Default" comment="base">
-      <change type="DELETED" beforePath="C:\GitHub\Task-1\out\production\Task-1\com\katruk\Main.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\GitHub\Task-1\out\production\Task-1\com\katruk\controller\Terminal$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\GitHub\Task-1\out\production\Task-1\com\katruk\controller\Terminal.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\GitHub\Task-1\out\production\Task-1\com\katruk\model\ammunition\Ammunition.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\GitHub\Task-1\out\production\Task-1\com\katruk\model\ammunition\AmmunitionImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\GitHub\Task-1\out\production\Task-1\com\katruk\model\ammunition\Armor.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\GitHub\Task-1\out\production\Task-1\com\katruk\model\ammunition\Shield.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\GitHub\Task-1\out\production\Task-1\com\katruk\model\ammunition\TypeAmmunition.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\GitHub\Task-1\out\production\Task-1\com\katruk\model\defaults\DefaultItems.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\GitHub\Task-1\out\production\Task-1\com\katruk\model\knight\Knight.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\GitHub\Task-1\out\production\Task-1\com\katruk\model\knight\KnightImpl$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\GitHub\Task-1\out\production\Task-1\com\katruk\model\knight\KnightImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\GitHub\Task-1\out\production\Task-1\com\katruk\model\logic\AmmunitionFactory$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\GitHub\Task-1\out\production\Task-1\com\katruk\model\logic\AmmunitionFactory.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\GitHub\Task-1\out\production\Task-1\com\katruk\model\logic\Base.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\GitHub\Task-1\out\production\Task-1\com\katruk\model\logic\KnightFactory.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\GitHub\Task-1\out\production\Task-1\com\katruk\veiw\ChoiceMenus.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\GitHub\Task-1\out\production\Task-1\com\katruk\veiw\Const.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\GitHub\Task-1\out\production\Task-1\com\katruk\veiw\Message.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\GitHub\Task-1\out\production\Task-1\com\katruk\veiw\Reader.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\GitHub\Task-1\out\production\Task-1\com\katruk\veiw\Writer.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/katruk/model/ammunition/Ammunition.java" afterPath="$PROJECT_DIR$/src/com/katruk/model/ammunition/Ammunition.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/katruk/model/logic/AmmunitionFactory.java" afterPath="$PROJECT_DIR$/src/com/katruk/model/logic/AmmunitionFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/katruk/model/ammunition/AmmunitionImpl.java" afterPath="$PROJECT_DIR$/src/com/katruk/model/ammunition/AmmunitionImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/katruk/model/ammunition/Armor.java" afterPath="$PROJECT_DIR$/src/com/katruk/model/ammunition/Armor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/katruk/model/logic/Base.java" afterPath="$PROJECT_DIR$/src/com/katruk/model/logic/Base.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/katruk/veiw/Const.java" afterPath="$PROJECT_DIR$/src/com/katruk/veiw/Const.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/katruk/model/knight/Knight.java" afterPath="$PROJECT_DIR$/src/com/katruk/model/knight/Knight.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/katruk/model/logic/KnightFactory.java" afterPath="$PROJECT_DIR$/src/com/katruk/model/logic/KnightFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/katruk/model/knight/KnightImpl.java" afterPath="$PROJECT_DIR$/src/com/katruk/model/knight/KnightImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/katruk/veiw/Reader.java" afterPath="$PROJECT_DIR$/src/com/katruk/veiw/Reader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/katruk/model/ammunition/Shield.java" afterPath="$PROJECT_DIR$/src/com/katruk/model/ammunition/Shield.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Task-1.iml" afterPath="$PROJECT_DIR$/.idea/Task-1.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/katruk/controller/Terminal.java" afterPath="$PROJECT_DIR$/src/com/katruk/controller/Terminal.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+    <list default="true" id="5810a957-787b-4869-9d50-7c09a3c6cb7c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Task-1.iws" />
@@ -89,11 +53,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Terminal.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Terminal.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/katruk/controller/Terminal.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33274648" vertical-offset="3466" max-vertical-offset="5780">
-              <caret line="228" column="72" selection-start-line="228" selection-start-column="72" selection-end-line="228" selection-end-column="72" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1069" max-vertical-offset="5780">
+              <caret line="233" column="0" selection-start-line="233" selection-start-column="0" selection-end-line="233" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/katruk/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -102,18 +76,18 @@
       <file leaf-file-name="Message.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/katruk/veiw/Message.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="595">
+            <state vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="595">
               <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Reader.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Reader.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/katruk/veiw/Reader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="394" max-vertical-offset="1292">
-              <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.8277027" vertical-offset="37" max-vertical-offset="935">
+              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -122,7 +96,7 @@
       <file leaf-file-name="KnightFactory.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/katruk/model/logic/KnightFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="680">
+            <state vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="680">
               <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
               <folding />
             </state>
@@ -132,7 +106,7 @@
       <file leaf-file-name="AmmunitionFactory.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/katruk/model/logic/AmmunitionFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="833">
+            <state vertical-scroll-proportion="0.0" vertical-offset="697" max-vertical-offset="833">
               <caret line="46" column="5" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
               <folding />
             </state>
@@ -156,12 +130,12 @@
         <option value="$PROJECT_DIR$/src/com/katruk/model/knight/KnightImpl.java" />
         <option value="$PROJECT_DIR$/src/com/katruk/model/knight/Knight.java" />
         <option value="$PROJECT_DIR$/src/com/katruk/model/logic/KnightFactory.java" />
-        <option value="$PROJECT_DIR$/src/com/katruk/veiw/Reader.java" />
         <option value="$PROJECT_DIR$/src/com/katruk/veiw/Const.java" />
         <option value="$PROJECT_DIR$/src/com/katruk/model/ammunition/AmmunitionImpl.java" />
         <option value="$PROJECT_DIR$/src/com/katruk/model/logic/Base.java" />
         <option value="$PROJECT_DIR$/src/com/katruk/veiw/Message.java" />
         <option value="$PROJECT_DIR$/src/com/katruk/controller/Terminal.java" />
+        <option value="$PROJECT_DIR$/src/com/katruk/veiw/Reader.java" />
       </list>
     </option>
   </component>
@@ -201,6 +175,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -259,137 +235,9 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Task-1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Task-1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="katruk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="logic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Task-1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Task-1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="katruk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="knight" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Task-1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Task-1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="katruk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="defaults" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Task-1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Task-1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="katruk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ammunition" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Task-1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Task-1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="katruk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
         <option name="show-excluded-files" value="false" />
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -696,6 +544,7 @@
       <workItem from="1474992358375" duration="214000" />
       <workItem from="1475577576875" duration="657000" />
       <workItem from="1475579783515" duration="4620000" />
+      <workItem from="1475584927390" duration="107000" />
     </task>
     <task id="LOCAL-00001" summary="base">
       <created>1474548379194</created>
@@ -703,20 +552,26 @@
       <option name="project" value="LOCAL" />
       <updated>1474548379194</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="base">
+      <created>1475585005890</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1475585005890</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17490000" />
+    <option name="totallyTimeSpent" value="17597000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1928" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32938644" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35522068" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35522068" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1034,7 +889,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="885">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1120,24 +974,16 @@
               <point x="53.25" y="54.0" />
             </edge>
           </edges>
-          <settings layout="Hierarchic Group" zoom="0.700275671950379" x="-562.8365676556916" y="891.8591181970278" />
+          <settings layout="Hierarchic Group" zoom="0.700275671950379" x="-563.0" y="892.0" />
           <SelectedNodes>
             <node>com.katruk.model.knight.KnightImpl</node>
           </SelectedNodes>
           <Categories>
-            <Category>Methods</Category>
             <Category>Inner Classes</Category>
+            <Category>Methods</Category>
           </Categories>
           <SCOPE>All</SCOPE>
           <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/katruk/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1153,7 +999,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.037861917" vertical-offset="0" max-vertical-offset="898">
           <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1193,14 +1038,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="833">
           <caret line="46" column="5" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/katruk/veiw/Reader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="394" max-vertical-offset="1292">
-          <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1253,8 +1090,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/katruk/controller/Terminal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33274648" vertical-offset="3466" max-vertical-offset="5780">
-          <caret line="228" column="72" selection-start-line="228" selection-start-column="72" selection-end-line="228" selection-end-column="72" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1069" max-vertical-offset="5780">
+          <caret line="233" column="0" selection-start-line="233" selection-start-column="0" selection-end-line="233" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/katruk/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/katruk/veiw/Reader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8277027" vertical-offset="37" max-vertical-offset="935">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
           <folding />
         </state>
       </provider>
