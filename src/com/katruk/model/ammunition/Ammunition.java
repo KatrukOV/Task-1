@@ -2,46 +2,52 @@ package com.katruk.model.ammunition;
 
 public interface Ammunition {
 
-	/**
-	 * get id of ammunition
-	 * @return 		id of ammunition
-	 */
-	public int getId();
+  /**
+   * get id of ammunition
+   *
+   * @return id of ammunition
+   */
+  int getId();
 
-	/**
-	 * get name of ammunition
-	 * @return	name of ammunition
-	 */
-	public String getName();
+  /**
+   * get name of ammunition
+   *
+   * @return name of ammunition
+   */
+  String getName();
 
-	/**
-	 * set name of ammunition
-	 * @param name	name of ammunition
-	 */
-	public void setName(String name);
+  /**
+   * set name of ammunition
+   *
+   * @param name name of ammunition
+   */
+  void setName(String name);
 
-	/**
-	 * get weight of ammunition
-	 * @return	weight of ammunition
-	 */
-	public int getWeight();
+  /**
+   * get weight of ammunition
+   *
+   * @return weight of ammunition
+   */
+  int getWeight();
 
-	/**
-	 * set weight of ammunition
-	 * @param weight	weight of ammunition
-	 */
-	public void setWeight(int weight);
+  /**
+   * set weight of ammunition
+   *
+   * @param weight weight of ammunition
+   */
+  void setWeight(int weight);
 
-	/**
-	 * get price of ammunition
-	 * @return	price of ammunition
-	 */
-	public int getPrice();
+  /**
+   * get price of ammunition
+   *
+   * @return price of ammunition
+   */
+  int getPrice();
 
-	/**
-	 * set	price of ammunition
-	 * @param price	price of ammunition
-	 */
-	public void setPrice(int price);
-
+  /**
+   * set	price of ammunition
+   *
+   * @param price price of ammunition
+   */
+  void setPrice(int price);
 }
