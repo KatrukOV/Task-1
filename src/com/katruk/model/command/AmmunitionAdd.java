@@ -1,0 +1,78 @@
+package com.katruk.model.command;
+
+import com.katruk.model.ammunition.Armor;
+import com.katruk.model.ammunition.Shield;
+import com.katruk.model.ammunition.TypeAmmunition;
+import com.katruk.model.logic.Base;
+import com.katruk.veiw.Const;
+import com.katruk.veiw.Message;
+import com.katruk.veiw.Reader;
+import com.katruk.veiw.Writer;
+
+public class AmmunitionAdd implements Call, Message, Const {
+
+  Writer writer = new Writer();
+  Reader reader = new Reader();
+
+  // todo dell
+  int flag;
+  int one;
+  int two;
+
+  @Override
+  public void call(Base base) {
+
+    do {
+      writer.printStr(ENTER_TYPE_AMMUNITION);
+
+      TypeAmmunition[] typeAmmunition = TypeAmmunition.values();
+      for (TypeAmmunition type : typeAmmunition) {
+        writer.printStr(String.format(" %s    %s \n", type.ordinal() + 1, type));
+      }
+
+      int numberCode = reader.readInt(one, two) - 1;
+
+      TypeAmmunition choiceType = null;
+      for (TypeAmmunition type : typeAmmunition) {
+        if (type.ordinal() == numberCode) {
+          choiceType = type;
+        }
+      }
+
+      writer.printStr(ENTER_NAME_AMMUNITION);
+      String name = reader.readString();
+      writer.printStr(ENTER_WEIGHT_AMMUNITION);
+      int weight = reader.readInt(MIN_WEIGHT_OF_AMMUNITION, MAX_WEIGHT_OF_AMMUNITION);
+      writer.printStr(ENTER_PRICE_AMMUNITION);
+      int price = reader.readInt(MIN_PRICE_OF_AMMUNITION, MAX_PRICE_OF_AMMUNITION);
+
+      assert choiceType != null;
+      switch (choiceType) {
+        case Shield: {
+          Shield shield = (Shield) base.createAmmunition(TypeAmmunition.Shield);
+          shield.setName(name);
+          shield.setWeight(weight);
+          shield.setPrice(price);
+          writer.printStr(ENTER_SHIELD_SKILL);
+          int skill = reader.readInt(MIN_SKILL_OF_SHIELD, MAX_SKILL_OF_SHIELD);
+          shield.setShieldSkill(skill);
+          base.addAmmunition(shield);
+          break;
+        }
+        case Armor: {
+          Armor armor = (Armor) base.createAmmunition(TypeAmmunition.Armor);
+          armor.setName(name);
+          armor.setWeight(weight);
+          armor.setPrice(price);
+          writer.printStr(ENTER_ARMOR_SKILL);
+          int skill = reader.readInt(MIN_SKILL_OF_ARMOR, MAX_SKILL_OF_ARMOR);
+          armor.setArmorSkill(skill);
+          base.addAmmunition(armor);
+          break;
+        }
+      }
+      writer.printStr(CONTINUE_ADD);
+      flag = reader.readInt(one, two);
+    } while (flag == one);
+  }
+}
