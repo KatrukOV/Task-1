@@ -3,7 +3,7 @@ package com.katruk.controller;
 import com.katruk.model.command.AmmunitionAdd;
 import com.katruk.model.command.AppointAmmunitionKnight;
 import com.katruk.model.command.CalcCostAmmunition;
-import com.katruk.model.command.Call;
+import com.katruk.model.command.State;
 import com.katruk.model.command.DefaultAmmunition;
 import com.katruk.model.command.DefaultKnights;
 import com.katruk.model.command.Exit;
@@ -13,7 +13,7 @@ import com.katruk.model.command.SearchRangeAmmunitionKnight;
 import com.katruk.model.command.ShowAmmunition;
 import com.katruk.model.command.ShowKnight;
 import com.katruk.model.command.SortAmmunitionOnKnight;
-import com.katruk.model.logic.Base;
+import com.katruk.model.logic.Memento;
 import com.katruk.veiw.ChoiceMenus;
 import com.katruk.veiw.Const;
 import com.katruk.veiw.Message;
@@ -22,7 +22,7 @@ import com.katruk.veiw.Writer;
 
 public class Terminal implements Const, Message {
 
-  private Base base = new Base();
+  private Memento memento = new Memento();
   private Reader reader = new Reader();
   private Writer writer = new Writer();
 
@@ -31,6 +31,7 @@ public class Terminal implements Const, Message {
    */
   public void start() {
 
+// todo del
     int flag;
 
     int one = 1;
@@ -55,64 +56,64 @@ public class Terminal implements Const, Message {
         }
       }
 
-      Call call;
+      State state;
 
       assert choiceMenus != null;
 
       switch (choiceMenus) {
         case DEFAULT_KNIGHTS: {
-          call = new DefaultKnights();
+          state = new DefaultKnights();
           break;
         }
         case DEFAULT_AMMUNITION: {
-          call = new DefaultAmmunition();
+          state = new DefaultAmmunition();
           break;
         }
         case KIGHT_ADD: {
-          call = new KnightAdd();
+          state = new KnightAdd();
           break;
         }
         case AMMUNITION_ADD: {
-          call = new AmmunitionAdd();
+          state = new AmmunitionAdd();
           break;
         }
         case APPOINT_AMMUNITION_KNIGHT: {
-          call = new AppointAmmunitionKnight();
+          state = new AppointAmmunitionKnight();
           break;
         }
         case CALC_COST_AMMUNITION: {
-          call = new CalcCostAmmunition();
+          state = new CalcCostAmmunition();
           break;
         }
         case SORT_AMMUNITION_ON_KNIGHT: {
-          call = new SortAmmunitionOnKnight();
+          state = new SortAmmunitionOnKnight();
           break;
         }
         case SEARCH_RANGE_AMMUNITION_KNIGHT: {
-          call = new SearchRangeAmmunitionKnight();
+          state = new SearchRangeAmmunitionKnight();
           break;
         }
         case SEARCH_RANGE_ALL_AMMUNITION: {
-          call = new SearchRangeAllAmmunition();
+          state = new SearchRangeAllAmmunition();
           break;
         }
         case SHOW_KNIGHT: {
-          call = new ShowKnight();
+          state = new ShowKnight();
           break;
         }
         case SHOW_AMMUNITION: {
-          call = new ShowAmmunition();
+          state = new ShowAmmunition();
           break;
         }
         case EXIT: {
-          call = new Exit();
+          state = new Exit();
           break;
         }
         default:
           throw new IllegalArgumentException();
       }
 
-      call.call(base);
+      state.handle(memento);
 
       writer.printStr(CONTINUE);
 
@@ -122,9 +123,8 @@ public class Terminal implements Const, Message {
     } while (flag == one);
   }
 
-
   private boolean EmptyKnightMap() {
-    if (base.getKnightMap().size() == 0) {
+    if (memento.getKnightMap().size() == 0) {
       writer.printStrLN(NO_KNIGHTS);
       return true;
     }
@@ -132,7 +132,7 @@ public class Terminal implements Const, Message {
   }
 
   private boolean EmptyAmmunitionMap() {
-    if (base.getAmmunitionMap().size() == 0) {
+    if (memento.getAmmunitionMap().size() == 0) {
       writer.printStrLN(NO_AMMUNITION);
       return true;
     }

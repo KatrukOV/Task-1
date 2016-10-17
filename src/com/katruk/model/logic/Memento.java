@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class Base {
+public class Memento {
 
   /**
    * map for all knights
@@ -22,7 +22,7 @@ public class Base {
   private Map<Integer, Ammunition> ammunitionMap = new HashMap<>();
 
   /**
-   * add to Base knight
+   * add to Memento knight
    *
    * @param knight knight
    * @param <T>    type of knight
@@ -33,7 +33,7 @@ public class Base {
   }
 
   /**
-   * add to Base ammunition
+   * add to Memento ammunition
    *
    * @param ammunition ammunition
    * @param <T>        type of ammunition

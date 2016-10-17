@@ -3,13 +3,13 @@ package com.katruk.model.command;
 import com.katruk.model.ammunition.Armor;
 import com.katruk.model.ammunition.Shield;
 import com.katruk.model.ammunition.TypeAmmunition;
-import com.katruk.model.logic.Base;
+import com.katruk.model.logic.Memento;
 import com.katruk.veiw.Const;
 import com.katruk.veiw.Message;
 import com.katruk.veiw.Reader;
 import com.katruk.veiw.Writer;
 
-public class AmmunitionAdd implements Call, Message, Const {
+public class AmmunitionAdd implements State, Message, Const {
 
   Writer writer = new Writer();
   Reader reader = new Reader();
@@ -20,7 +20,7 @@ public class AmmunitionAdd implements Call, Message, Const {
   int two;
 
   @Override
-  public void call(Base base) {
+  public void handle(Memento memento) {
 
     do {
       writer.printStr(ENTER_TYPE_AMMUNITION);
@@ -49,25 +49,25 @@ public class AmmunitionAdd implements Call, Message, Const {
       assert choiceType != null;
       switch (choiceType) {
         case Shield: {
-          Shield shield = (Shield) base.createAmmunition(TypeAmmunition.Shield);
+          Shield shield = (Shield) memento.createAmmunition(TypeAmmunition.Shield);
           shield.setName(name);
           shield.setWeight(weight);
           shield.setPrice(price);
           writer.printStr(ENTER_SHIELD_SKILL);
           int skill = reader.readInt(MIN_SKILL_OF_SHIELD, MAX_SKILL_OF_SHIELD);
           shield.setShieldSkill(skill);
-          base.addAmmunition(shield);
+          memento.addAmmunition(shield);
           break;
         }
         case Armor: {
-          Armor armor = (Armor) base.createAmmunition(TypeAmmunition.Armor);
+          Armor armor = (Armor) memento.createAmmunition(TypeAmmunition.Armor);
           armor.setName(name);
           armor.setWeight(weight);
           armor.setPrice(price);
           writer.printStr(ENTER_ARMOR_SKILL);
           int skill = reader.readInt(MIN_SKILL_OF_ARMOR, MAX_SKILL_OF_ARMOR);
           armor.setArmorSkill(skill);
-          base.addAmmunition(armor);
+          memento.addAmmunition(armor);
           break;
         }
       }

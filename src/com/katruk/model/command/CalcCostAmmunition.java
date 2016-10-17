@@ -1,11 +1,11 @@
 package com.katruk.model.command;
 
-import com.katruk.model.logic.Base;
+import com.katruk.model.logic.Memento;
 import com.katruk.veiw.Message;
 import com.katruk.veiw.Reader;
 import com.katruk.veiw.Writer;
 
-public class CalcCostAmmunition implements Call, Message {
+public class CalcCostAmmunition implements State, Message {
 
   Writer writer = new Writer();
   Reader reader = new Reader();
@@ -16,7 +16,7 @@ public class CalcCostAmmunition implements Call, Message {
   int two;
 
   @Override
-  public void call(Base base) {
+  public void handle(Memento memento) {
 //    if (EmptyKnightMap()) {
 //      return;
 //    }
@@ -24,11 +24,11 @@ public class CalcCostAmmunition implements Call, Message {
     do {
       writer.printStr(ENTER_ID_KNIGHT);
 
-      int id = reader.readInt(0, base.getKnightMap().size() - 1);
-      double cost = base.getKnightMap().get(id).calculateCostAmmunition();
+      int id = reader.readInt(0, memento.getKnightMap().size() - 1);
+      double cost = memento.getKnightMap().get(id).calculateCostAmmunition();
 
       writer.printStrLN(String.format(COST_AMMUNITION_KNIGHT,
-                                      base.getKnightMap().get(id).getName(), cost));
+                                      memento.getKnightMap().get(id).getName(), cost));
 
       writer.printStr(CONTINUE_CALCULATE);
       flag = reader.readInt(one, two);

@@ -1,13 +1,13 @@
 package com.katruk.model.command;
 
 import com.katruk.model.defaults.DefaultItems;
-import com.katruk.model.logic.Base;
+import com.katruk.model.logic.Memento;
 
-public class DefaultAmmunition implements Call {
+public class DefaultAmmunition implements State {
 
   @Override
-  public void call(Base base) {
-    base.setAmmunitionMap(new DefaultItems().addDefaultAmmunition());
+  public void handle(Memento memento) {
+    memento.setAmmunitionMap(new DefaultItems().addDefaultAmmunition());
     //showAmmunition();
   }
 }

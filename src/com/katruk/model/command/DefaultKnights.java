@@ -1,14 +1,14 @@
 package com.katruk.model.command;
 
 import com.katruk.model.defaults.DefaultItems;
-import com.katruk.model.logic.Base;
+import com.katruk.model.logic.Memento;
 
-public class DefaultKnights implements Call {
+public class DefaultKnights implements State {
 
 
   @Override
-  public void call(Base base) {
-    base.setKnightMap(new DefaultItems().addDefaultKnight());
+  public void handle(Memento memento) {
+    memento.setKnightMap(new DefaultItems().addDefaultKnight());
 //    showKnight();
   }
 }
