@@ -42,11 +42,11 @@ public class AmmunitionFactory {
     Ammunition result = null;
 
     switch (type) {
-      case Armor: {
+      case ARMOR: {
         result = new Armor(idAmmunition++);
         break;
       }
-      case Shield: {
+      case SHIELD: {
         result = new Shield(idAmmunition++);
         break;
       }

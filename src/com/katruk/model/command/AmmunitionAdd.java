@@ -48,8 +48,8 @@ public class AmmunitionAdd implements State, Message, Const {
 
       assert choiceType != null;
       switch (choiceType) {
-        case Shield: {
-          Shield shield = (Shield) memento.createAmmunition(TypeAmmunition.Shield);
+        case SHIELD: {
+          Shield shield = (Shield) memento.createAmmunition(TypeAmmunition.SHIELD);
           shield.setName(name);
           shield.setWeight(weight);
           shield.setPrice(price);
@@ -59,8 +59,8 @@ public class AmmunitionAdd implements State, Message, Const {
           memento.addAmmunition(shield);
           break;
         }
-        case Armor: {
-          Armor armor = (Armor) memento.createAmmunition(TypeAmmunition.Armor);
+        case ARMOR: {
+          Armor armor = (Armor) memento.createAmmunition(TypeAmmunition.ARMOR);
           armor.setName(name);
           armor.setWeight(weight);
           armor.setPrice(price);
