@@ -69,7 +69,7 @@ public class Terminal implements Const, Message {
           state = new DefaultAmmunition();
           break;
         }
-        case KIGHT_ADD: {
+        case KNIGHT_ADD: {
           state = new KnightAdd();
           break;
         }

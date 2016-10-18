@@ -3,7 +3,7 @@ package com.katruk.veiw;
 public enum ChoiceMenus {
   DEFAULT_KNIGHTS(" 1 - use default knights"),
   DEFAULT_AMMUNITION(" 2 - use default ammunition"),
-  KIGHT_ADD(" 3 - add new knight"),
+  KNIGHT_ADD(" 3 - add new knight"),
   AMMUNITION_ADD(" 4 - add ammunition"),
   APPOINT_AMMUNITION_KNIGHT(" 5 - appoint ammunition knight"),
   CALC_COST_AMMUNITION(" 6 - calculate cost of ammunition on knight"),
